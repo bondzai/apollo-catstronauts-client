@@ -1,7 +1,10 @@
+require('dotenv').config();
+
 import express, { Request, Response } from 'express';
 import { ApolloServer } from 'apollo-server-express';
 import { typeDefs } from './graphql/schema';
 import { resolvers } from './graphql/resolvers';
+import expressPlayground from 'graphql-playground-middleware-express';
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -22,6 +25,8 @@ const startExpressServer = () => {
         console.log(`Express server running at http://localhost:${port}`);
     });
 };
+
+app.get('/graphql', expressPlayground({ endpoint: '/graphql' }));
 
 const startServer = async () => {
     try {
