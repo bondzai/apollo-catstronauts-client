@@ -1,3 +1,3 @@
-# Catstronauts - server
+# Catstronauts - client
 
-The starting point of the `server` code after completing the Odyssey Lift-off IV course.
+The starting point of the `client` code after completing the Odyssey Lift-off IV course.
