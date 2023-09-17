@@ -9,9 +9,9 @@ export default function Pages() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Tracks />} path="/" />
-        <Route element={<Track />} path="/track/:trackId" />
-        <Route element={<Module />} path="/track/:trackId/module/:moduleId" />
+        <Route path="/" element={<Tracks />}/>
+        <Route path="/track/:trackId" element={<Track />}/>
+        <Route path="/track/:trackId/module/:moduleId" element={<Module />}/>
       </Routes>
     </BrowserRouter>
   );
