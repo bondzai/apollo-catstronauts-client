@@ -4,8 +4,10 @@ import GlobalStyles from './styles';
 import Pages from './pages';
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL
+
 const client = new ApolloClient({
-  uri: 'http://localhost:4000',
+  uri: BACKEND_URL || 'http://localhost:4000',
   cache: new InMemoryCache(),
 });
 
